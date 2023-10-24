@@ -13,7 +13,9 @@ class hi{
 }
 let pass = prompt("Enter the password");
 let allow = new hi(pass);
-if(allow.checkPass() == false){
+if(allow.checkPass()){
+    window.location.replace("second.html");
+} else {
     window.location.replace("index.html");
 }
 //text printing system

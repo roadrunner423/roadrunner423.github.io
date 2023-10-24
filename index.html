@@ -2,7 +2,6 @@
 <html>
     <head>
         <link rel = "stylesheet" href = "blobos.css">
-        
     </head>
     <body>
         <h1 id = center>Lets Learn Things!</h1>
@@ -10,7 +9,28 @@
             and as I learn this site will evolve. Until then, enjoy this blank html site!</p>
         
         <a href = "middle.html">Another page!</a>
-        
+        <br />
+        <br />
+        <button id = "text" type ="button" onclick="run();">button(no need to click)</button>
+        <script>
+            var count = 0;
+            let content = "";
+            let run = () => {
+                if(count == 0){
+                    content = "Hello there";
+                } else if (count == 1){
+                    content = "Why you click";
+                }else if(count == 2){ 
+                    content = "I just want to know";
+                }else if(count == 3){
+                    content = "Why click random button?";
+                }else{
+                    content = "Ok, I count for you "+ (count-4);
+                }
+                count += 1;
+                document.getElementById("text").innerHTML =  content 
+            }
+        </script>
         
     </body>
 </html>

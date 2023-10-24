@@ -11,7 +11,9 @@ h1{
 p{
     color: var(--text);
 }
-
+a{
+    color: white;
+}
 #center{
     text-align: center;
 }

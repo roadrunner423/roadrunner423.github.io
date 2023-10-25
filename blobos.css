@@ -2,7 +2,7 @@
     --text: white;
     --bg: black;
 }
-body {
+body{
     background-color: var(--bg);
 }
 h1{
@@ -18,5 +18,8 @@ a{
     text-align: center;
 }
 #text{
+    color: var(--bg);
+}
+#nightmare{
     text-align: center;
 }

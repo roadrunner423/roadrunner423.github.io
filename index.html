@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel = "stylesheet" href = "blobos.css">
+        <script src="https://randojs.com/1.0.0.js"></script>
     </head>
     <body>
         <h1 id = center>Lets Learn Things!</h1>
@@ -11,7 +12,9 @@
         <a href = "middle.html">Another page!</a>
         <br />
         <br />
+        
         <button id = "text" type ="button" onclick="run();">button(no need to click)</button>
+        <div id = "nightmare"></div>
         <script>
             var count = 0;
             let content = "";
@@ -24,12 +27,26 @@
                     content = "I just want to know";
                 }else if(count == 3){
                     content = "Why click random button?";
+                }else if(count <= 33){
+                    content = "Ok, I count for you "+ (count-4);
                 }else{
+                    nightmare();
                     content = "Ok, I count for you "+ (count-4);
                 }
                 count += 1;
-                document.getElementById("text").innerHTML =  content 
+                document.getElementById("text").innerHTML =  content
             }
+        </script>
+        <script>
+            let nightmare = () =>{
+                let night = 0;
+                document.getElementById("nightmare").innerHTML = "<h1>Nightmare Nightmare Nightmare</h1>"
+                setInterval(function(){
+                    document.body.style.backgroundColor = "#"+ rando(100000,999999)
+                    night += 1;
+                },10);   
+            }
+            
         </script>
         
     </body>
